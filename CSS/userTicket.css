@@ -1,0 +1,540 @@
+/* ============================================
+   USER DASHBOARD - MODERN DESIGN
+   ============================================ */
+
+.content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+}
+
+/* ============================================
+   SIDEBAR - CREATE TICKET
+   ============================================ */
+
+.sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    padding-bottom: 18px;
+    border-bottom: 3px solid #667eea;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-title::before {
+    
+    font-size: 20px;
+}
+
+.ticket-form .form-group {
+    margin-bottom: 22px;
+}
+
+.ticket-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.ticket-form .form-group select,
+.ticket-form .form-group input,
+.ticket-form .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fafbff;
+}
+
+.ticket-form .form-group select:focus,
+.ticket-form .form-group input:focus,
+.ticket-form .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.ticket-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ticket-form .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ticket-form .submit-btn::before {
+    font-size: 16px;
+}
+
+.ticket-form .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.ticket-form .submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main-content {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.page-subtitle {
+    color: #7f8c8d;
+    font-size: 15px;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+/* ============================================
+   QUICK STATS
+   ============================================ */
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.quick-stat {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.quick-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.5s;
+}
+
+.quick-stat:hover::before {
+    left: 100%;
+}
+
+.quick-stat:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+}
+
+.quick-stat:nth-child(1) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.quick-stat:nth-child(2) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.quick-stat:nth-child(3) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.quick-stat:nth-child(4) {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.stat-icon {
+    font-size: 36px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-label {
+    font-size: 11px;
+    opacity: 0.95;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 6px 0 0 0;
+}
+
+/* ============================================
+   TABLE STYLES
+   ============================================ */
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 2px solid #e8e8e8;
+}
+
+th {
+    padding: 18px 16px;
+    text-align: left;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+tbody tr {
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+}
+
+tbody tr:hover {
+    background: linear-gradient(90deg, #f8f9ff 0%, #ffffff 100%);
+    border-left-color: #667eea;
+    box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.05);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================
+   TYPE BADGE & STATUS BADGE
+   ============================================ */
+
+.type-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #e8f4f8;
+    color: #0066cc;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #b3d9ed;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+.status-approved { background: #d1ecf1; color: #0c5460; border: 1px solid #b8daff; }
+.status-ongoing { background: #cfe2ff; color: #084298; border: 1px solid #b6d4fe; }
+.status-completed { background: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+.status-cancelled { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+.status-declined { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+.status-rejected { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+.status-accepted { background: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+.status-failed { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-state {
+    text-align: center;
+    padding: 80px 40px;
+    color: #bbb;
+    font-size: 18px;
+}
+
+.empty-state::before {
+
+    display: block;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .content {
+        grid-template-columns: 300px 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 14px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .sidebar-title {
+        font-size: 16px;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+    }
+
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .quick-stat {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .stat-icon {
+        font-size: 28px;
+        min-width: 40px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .ticket-form .form-group {
+        margin-bottom: 16px;
+    }
+
+    .ticket-form .submit-btn {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 12px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .sidebar-title {
+        font-size: 14px;
+    }
+
+    .quick-stat {
+        padding: 16px;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content,
+.sidebar {
+    animation: slideUp 0.5s ease-out;
+}
+
+.quick-stats {
+    animation: slideUp 0.6s ease-out;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.header-left h1 {
+    margin: 0;
+}
+
+.header-left p {
+    margin: 5px 0 0;
+}
+
+/* Logout button */
+.logout-btn {
+    padding: 10px 18px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}

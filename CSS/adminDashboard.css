@@ -1,0 +1,118 @@
+/* Admin Dashboard Theme: Red, Gray, White */
+body {
+    background: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 40px 24px 40px;
+}
+
+.header {
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: #e53935;
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.header button {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.header button:hover {
+    background: #b71c1c;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+table {
+  max-width: 1100px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 40px 24px 40px;
+}
+
+thead {
+    background: #e53935;
+    color: #fff;
+}
+
+thead th {
+    padding: 14px 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+tbody td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+tr:nth-child(even) td {
+    background: #f7f7f7;
+}
+
+tr:hover td {
+    background: #ffeaea;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 12px 4px;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tr {
+        margin-bottom: 25px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(229,57,53,0.05);
+    }
+    td {
+        padding: 18px 15px;
+        border: none;
+        position: relative;
+    }
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #e53935;
+        display: block;
+        margin-bottom: 15px;
+    }
+}
