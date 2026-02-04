@@ -49,7 +49,7 @@ if ($result && $result->num_rows > 0) {
         <div class="header-info">
             <p>👤 Admin: <strong><?= htmlspecialchars($email) ?></strong></p>
             <div class="header-right">
-                <a href="process_logout.php" class="logout-btn" style="margin: 1800px;">Logout</a>
+                <a href="adminDashboard.php" class="logout-btn" style="margin: 1800px;">Logout</a>
             </div>
         </div>
     </div>

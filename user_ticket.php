@@ -46,7 +46,7 @@ while ($row = $ticket_stats->fetch_assoc()) {
         <div class="header-info">
             <p>👤 Welcome, <strong><?= htmlspecialchars($username) ?></strong></p>
            <div class="header-right">
-                <a href="process_logout.php" class="logout-btn" style="margin: 1800px; margin-bottom: 20px;">Logout</a>
+                <a href="userDashboard.php" class="logout-btn" style="margin: 1800px; margin-bottom: 20px;">Logout</a>
             </div>
         </div>
     </div>

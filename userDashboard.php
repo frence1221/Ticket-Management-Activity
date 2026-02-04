@@ -28,6 +28,7 @@ $user = $result->fetch_assoc();
 <body>
 
     <div class="profile-card">
+        
         <button style="float:right;" onclick="window.location.href='index.php'">Logout</button>
         <h2>User Profile</h2>
         <div class="avatar">
@@ -40,12 +41,23 @@ $user = $result->fetch_assoc();
         <p style="font-weight: bold;">Age<br><?php echo htmlspecialchars($user['age']); ?></p>
         <p style="font-weight: bold;">Gender<br><?php echo htmlspecialchars(ucfirst($user['gender'])); ?></p>
         <p style="font-weight: bold;">Phone<br>+63<?php echo htmlspecialchars($user['phone_number']); ?></p>
+        <button type="button"
+            onclick="window.location.href='user_ticket.php'"
+            style="
+                padding: 10px 24px;
+                background: linear-gradient(135deg, #ffffff, #ffffff);
+                color: #080808;
+                border: none;
+                border-radius: 4px;
+                font-size: 15px;
+                cursor: pointer;
+                margin-top: 600px;
+                width: 95%;
+               
+            ">
+            🎫 Ticket Management
+        </button>
     </div>
-
-    <button type="button" class="login-btn"
-        onclick="window.location.href='user_ticket.php'">
-        Ticket Management
-    </button>
 
 </body>
 
